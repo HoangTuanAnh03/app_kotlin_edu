@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/white"
+tools:context=".views.profile.orderhistory.OrderHistoryActivity">
+<RelativeLayout
+    android:id="@+id/actionbarOrderHistory"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:background="@color/blue"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+    <ImageView
+        android:id="@+id/orderHistoryBack"
+        android:src="@drawable/ic_back2"
+        android:layout_width="22dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginStart="16dp"
+        android:layout_centerVertical="true"
+        android:layout_height="22dp">
+    </ImageView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Lịch sử đổi thưởng"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content">
+    </TextView>
+</RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/OrderHistoryRecycleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actionbarOrderHistory"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="-29dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</androidx.constraintlayout.widget.ConstraintLayout>
